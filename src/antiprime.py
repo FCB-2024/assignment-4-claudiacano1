@@ -1,7 +1,7 @@
 ## ADD WHATEVER ARGUMENTS ARE NECESSARY TO THE MAIN FUNCTION
 ## IN THE SAME ORDER AS THE ARGUMENTS ARE TAKEN FROM THE
 ## COMMAND LINE SPECIFIED BELOW
-def main() :
+def main(x) :
 	## YOU CODE SHOULD START HERE AST THE SAME
 	## IDENTATION AS THIS COMMENT
 
@@ -33,9 +33,10 @@ def main() :
 	## "anti-prime" or "not anti-prime"
 
 	if s >= r:
-		return ("not anti-prime")
+		res = "no anti-prime"	
 	else: 
-		return ("anti-prime")
+		res = "anti-prime"
+	return (res)
 
 ## DO NOT REMOVE THIS LINE BELOW
 if __name__ == "__main__" :
@@ -46,4 +47,4 @@ if __name__ == "__main__" :
 	## WHERE THE FIRST ARGUMENT IS A POSITIVE INTEGER NUMBER FOR WHICH
 	## YOU WANT TO FIGURE OUT WHETHER IS ANTI-PRIME OR NOT
 	x = int (input("enter one value: "))
-	print(main())
+	print(main(x))

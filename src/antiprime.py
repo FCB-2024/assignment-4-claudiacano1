@@ -7,24 +7,22 @@ def main(x) :
 
 	i = int ("1")
 	r = int ("0")
-
 	while i <= x:
 		if x % i == 0:
 			r = r + int ("1")
 		i = i + int ("1")
 
-	s = int ("0")
-	p = x - int ("1")
+	s = int("0")
+	p = x - int("1")
 
 	while p >= int ("1") and s < r:
 		f = int ("1")
 		s = int ("0")
-
 		while f <= p:
 			if p % f == 0:
-				s = s + int ("1")
-			f = f + int ("1")
-		p = p - int ("1")
+				s = s + int("1")
+			f = f + int("1")
+		p = p - int("1")
 
 	## THE LAST LINES OF YOUR CODE SHOULD EITHER
 	## RETURN THE VALUE "anti-prime" or "not anti-prime"
@@ -33,9 +31,9 @@ def main(x) :
 	## "anti-prime" or "not anti-prime"
 
 	if s >= r:
-		res = "no anti-prime"	
+		res = ("not anti-prime")
 	else: 
-		res = "anti-prime"
+		res = ("anti-prime")
 	return (res)
 
 ## DO NOT REMOVE THIS LINE BELOW
@@ -46,5 +44,6 @@ if __name__ == "__main__" :
 	## $ python antiprime.py 6
 	## WHERE THE FIRST ARGUMENT IS A POSITIVE INTEGER NUMBER FOR WHICH
 	## YOU WANT TO FIGURE OUT WHETHER IS ANTI-PRIME OR NOT
-	x = int (input("enter one value: "))
+	import sys
+	x = int (sys.argv [1])
 	print(main(x))
